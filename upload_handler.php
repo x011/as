@@ -6,7 +6,7 @@ var_dump($_FILES);
 $gs_name = $_FILES['uploaded_files']['tmp_name'];
 move_uploaded_file($gs_name, 'gs://aspy/new_file.txt');
 
-if (false == rename('gs://my_bucket/new_file.txt', 'gs://my_bucket/newname.txt', $ctx)) {
+if (false == rename('gs://aspy/new_file.txt', 'gs://aspy/newname.txt', $ctx)) {
   die('Could not rename.');
 }
 

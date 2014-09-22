@@ -11,23 +11,23 @@ move_uploaded_file($gs_name, 'gs://android-spy11.appspot.com/new_file33.txt');
 
 
 	
-
-    $storage = new Google_Service_Storage_StorageObject();
+$storage = new Google_Service_Storage();
+    /*$storage = new Google_Service_Storage_StorageObject();
     $storage->setName('gs://android-spy11.appspot.com/new_file33.txt');
-    $storage->setAcl('public-read');
+    $storage->setAcl('public-read');*/
            
-    /*$acl = new Google_Service_Storage_ObjectAccessControl();
+    $acl = new Google_Service_Storage_ObjectAccessControl();
     $acl->setEntity('allUsers');
     $acl->setRole('READER');
-    $acl->setBucket('<BUCKET-NAME>');
-    $acl->setObject('<OBJECT-NAME>');
+    $acl->setBucket('gs://android-spy11.appspot.com');
+    $acl->setObject('new_file55.txt');
      
     // $storage being a valid Google_Service_Storage instance
-    $response = $storage->objectAccessControls->insert('<BUCKET-NAME>', '<OBJECT-NAME>', $acl);*/
+    $response = $storage->objectAccessControls->insert('gs://android-spy11.appspot.com', 'new_file55.txt' $acl);
 
 
 
-$object_public_url = CloudStorageTools::getPublicUrl('gs://android-spy11.appspot.com/new_file33.txt', true);
+$object_public_url = CloudStorageTools::getPublicUrl('gs://android-spy11.appspot.com/new_file55.txt', true);
 //$options = stream_context_create(['gs'=>['acl'=>'public-read']]);
 //$object_public_url = CloudStorageTools::getPublicUrl($public_url, false);
 

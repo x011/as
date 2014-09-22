@@ -5,8 +5,9 @@
 require_once 'google/appengine/api/cloud_storage/CloudStorageTools.php';
 use google\appengine\api\cloud_storage\CloudStorageTools;
 
-$options = [ 'gs_bucket_name' => 'aspy' ];
-$upload_url = CloudStorageTools::createUploadUrl('http://android-spy11.appspot.com/upload_handler.php', $options);
+#$options = [ 'gs_bucket_name' => 'aspy' ];
+#$upload_url = CloudStorageTools::createUploadUrl('http://android-spy11.appspot.com/upload_handler.php', $options);
+$upload_url = CloudStorageTools::createUploadUrl('http://android-spy11.appspot.com/upload_handler.php');
 
 
 ?>

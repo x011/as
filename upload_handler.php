@@ -9,5 +9,5 @@ move_uploaded_file($gs_name, 'gs://aspy/new_file.txt');
 if (false == rename('gs://aspy/new_file.txt', 'gs://aspy/newname.txt', $ctx)) {
   die('Could not rename.');
 }*/
-
+echo "me";
 ?>

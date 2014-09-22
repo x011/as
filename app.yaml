@@ -6,9 +6,9 @@ threadsafe: true
 
 handlers:
 # Serve images as static resources.
-- url: /(.+\.(gif|png|jpg))$
+- url: /(.+\.(gif|png|jpg|txt))$
   static_files: \1
-  upload: .+\.(gif|png|jpg)$
+  upload: .+\.(gif|png|jpg|txt)$
   application_readable: true
 
 # Serve php scripts.

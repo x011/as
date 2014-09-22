@@ -1,5 +1,5 @@
-application: helloworld
-version: 1
+application: aspy
+version: 2
 runtime: php
 api_version: 1
 threadsafe: true

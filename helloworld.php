@@ -1,6 +1,7 @@
 <?php
   //echo 'Hello, World!';
-  
+  error_reporting(E_ALL);
+  ini_set('display_errors', '1');
 require_once 'google/appengine/api/cloud_storage/CloudStorageTools.php';
 use google\appengine\api\cloud_storage\CloudStorageTools;
 

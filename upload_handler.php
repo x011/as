@@ -8,10 +8,18 @@ use google\appengine\api\cloud_storage\CloudStorageTools;
 
 //$gs_name = $_FILES['userfile']['tmp_name'];
 
+$user = $_POST['user'];
+if(!EMPTY($user))
+{
 //$file = $_FILES['userfile'];
-$fileName = 'gs://android-spy11.appspot.com/'.$_FILES['userfile']['name'];
+$fileName = "gs://android-spy11.appspot.com/$user/".$_FILES['userfile']['name'];
 echo $fileName."<br>";
 
+
+//checks if directory exists, if not create it
+if(!file_exists("gs://android-spy11.appspot.com/$user/")){
+mkdir("gs://android-spy11.appspot.com/$user/");
+}
 
 /*$gs_name = $_FILES['userfile']['tmp_name'];
 move_uploaded_file($gs_name, 'gs://my_bucket/new_file.txt');*/
@@ -32,6 +40,8 @@ if (false == rename($_FILES['userfile']['tmp_name'], $fileName, $ctx)) {
 $object_public_url = CloudStorageTools::getPublicUrl($fileName, true);
 echo $object_public_url."<br>";
 //header('Location:' .$object_public_url);
+}else{
+    echo "NOT ALLOWED";
+}
 
-//echo $public_url;
 ?>

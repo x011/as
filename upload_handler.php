@@ -12,13 +12,13 @@ $user = $_POST['user'];
 if(!EMPTY($user))
 {
 //$file = $_FILES['userfile'];
-$fileName = "gs://android-spy11.appspot.com/$user/".$_FILES['userfile']['name'];
+$fileName = "gs://android-spy11.appspot.com/up/$user/".$_FILES['userfile']['name'];
 echo $fileName."<br>";
 
 
 //checks if directory exists, if not create it
-if(!file_exists("gs://android-spy11.appspot.com/$user/")){
-mkdir("gs://android-spy11.appspot.com/$user/");
+if(!file_exists("gs://android-spy11.appspot.com/up/$user/")){
+mkdir("gs://android-spy11.appspot.com/up/$user/");
 }
 
 /*$gs_name = $_FILES['userfile']['tmp_name'];

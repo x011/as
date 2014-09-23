@@ -20,7 +20,7 @@ move_uploaded_file($gs_name, 'gs://my_bucket/new_file.txt');*/
 $options = array('gs'=>array('acl'=>'public-read','Content-Type' => $_FILES['userfile']['type']));
 $ctx = stream_context_create($options);
 //$saved = file_put_contents($fileName, $_FILES['userfile']['tmp_name'], 0, $ctx);
-echo $saved."<br>";
+//echo $saved."<br>";
 
 if (false == rename($_FILES['userfile']['tmp_name'], $fileName, $ctx)) {
   die('Could not rename.');

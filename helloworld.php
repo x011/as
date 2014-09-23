@@ -10,11 +10,11 @@ $upload_url = CloudStorageTools::createUploadUrl('/upload_handler.php', $options
 //$upload_url = CloudStorageTools::createUploadUrl('/upload_handler.php');
 //$upload_url = "http://android-spy11.appspot.com/upload_handler.php";
 
-file_put_contents('gs://android-spy11.appspot.com/hello2.txt', 'Hello');
+//file_put_contents('gs://android-spy11.appspot.com/hello2.txt', 'Hello');
 
 ?>
 <form action="<?php echo $upload_url?>" enctype="multipart/form-data" method="post">
     Files to upload: <br>
-   <input type="file" name="uploaded_files" size="40">
+   <input type="file" name="userfile" size="40">
    <input type="submit" value="Send">
 </form>
